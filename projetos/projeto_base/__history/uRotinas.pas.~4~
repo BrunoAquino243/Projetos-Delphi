@@ -1,0 +1,43 @@
+unit uRotinas;
+
+interface
+
+uses
+  Windows, SysUtils, Classes, Forms;
+
+function MsgErro(Text: String): integer;
+function confirma(Text: String): Boolean;
+
+implementation
+
+function MsgErro(Text: String): integer;
+VAR
+  iRetorno: integer;
+begin
+
+    case MessageBox(Application.Handle,Pchar(Text), 'Erro Crítico', MB_ABORTRETRYIGNORE + mb_iconHand) of
+      IDABORT : iRetorno := IDABORT;
+      IDRETRY : iRetorno := IDRETRY;
+      IDIGNORE : iRetorno := IDIGNORE;
+    end;
+
+    result := iRetorno;
+
+end;
+
+function confirma(Text: String): Boolean;
+VAR
+  iRetorno: integer;
+begin
+
+    iRetorno := MessageBox(Application.Handle,Pchar(Text), 'Erro Crítico', MB_YESNO + MB_ICONQUESTION);
+
+    if (iRetorno = ID_YES) then
+      result := true
+    else
+      result := False;
+
+end;
+
+end.
+

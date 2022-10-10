@@ -1,0 +1,182 @@
+object frmMntCorretores: TfrmMntCorretores
+  Left = 0
+  Top = 0
+  Caption = 'Manuten'#231#227'o de Corretores'
+  ClientHeight = 415
+  ClientWidth = 621
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pgCadastro: TPageControl
+    Left = 0
+    Top = 0
+    Width = 621
+    Height = 415
+    ActivePage = tabEdicao
+    Align = alClient
+    TabOrder = 0
+    object tabConsulta: TTabSheet
+      Caption = 'Consulta'
+      object Label1: TLabel
+        Left = 3
+        Top = 78
+        Width = 62
+        Height = 16
+        Caption = 'Pesquisa:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object DBGrid1: TDBGrid
+        Left = 3
+        Top = 104
+        Width = 549
+        Height = 225
+        DataSource = dtmCRM.dtsCorretor
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
+      object btnConsulta: TDBNavigator
+        Left = 551
+        Top = 104
+        Width = 58
+        Height = 225
+        DataSource = dtmCRM.dtsCorretor
+        VisibleButtons = [nbInsert, nbDelete, nbEdit]
+        Kind = dbnVertical
+        ConfirmDelete = False
+        TabOrder = 1
+        BeforeAction = btnConsultaBeforeAction
+      end
+      object SearchBox1: TSearchBox
+        Left = 71
+        Top = 77
+        Width = 481
+        Height = 21
+        TabOrder = 2
+        OnChange = SearchBox1Change
+      end
+    end
+    object tabEdicao: TTabSheet
+      Caption = 'Inser'#231#227'o/Edi'#231#227'o'
+      ImageIndex = 1
+      object lbl_nome: TLabel
+        Left = 25
+        Top = 60
+        Width = 40
+        Height = 16
+        Caption = 'Nome:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object lbl_codigo: TLabel
+        Left = 17
+        Top = 19
+        Width = 48
+        Height = 16
+        Caption = 'C'#243'digo:'
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object lbl_celular: TLabel
+        Left = 16
+        Top = 100
+        Width = 49
+        Height = 16
+        Caption = 'Celular:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object lbl_email: TLabel
+        Left = 28
+        Top = 140
+        Width = 37
+        Height = 16
+        Caption = 'Email:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object btnEdicao: TDBNavigator
+        Left = 71
+        Top = 179
+        Width = 146
+        Height = 46
+        DataSource = dtmCRM.dtsCorretor
+        VisibleButtons = [nbPost, nbCancel]
+        TabOrder = 4
+        OnClick = btnEdicaoClick
+      end
+      object edt_nome: TDBEdit
+        Left = 71
+        Top = 59
+        Width = 146
+        Height = 21
+        DataField = 'NOME'
+        DataSource = dtmCRM.dtsCorretor
+        TabOrder = 1
+      end
+      object edt_codigo: TDBEdit
+        Left = 71
+        Top = 18
+        Width = 146
+        Height = 21
+        DataField = 'CODCORRETOR'
+        DataSource = dtmCRM.dtsCorretor
+        Enabled = False
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object edt_celular: TDBEdit
+        Left = 71
+        Top = 99
+        Width = 146
+        Height = 21
+        DataField = 'CELULAR'
+        DataSource = dtmCRM.dtsCorretor
+        TabOrder = 2
+      end
+      object edt_email: TDBEdit
+        Left = 71
+        Top = 139
+        Width = 146
+        Height = 21
+        DataField = 'EMAIL'
+        DataSource = dtmCRM.dtsCorretor
+        TabOrder = 3
+      end
+    end
+  end
+end

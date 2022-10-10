@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/10/29 13:42:20.000.162,=C:\Users\vandersonmagalhaes\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 13:44:55.000.017,C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\frmMenu.pas=C:\Users\vandersonmagalhaes\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 13:44:55.000.017,C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\frmMenu.dfm=C:\Users\vandersonmagalhaes\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/10/29 13:45:09.000.871,C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\projeto_base.dproj=C:\Users\vandersonmagalhaes\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/10/29 14:00:36.000.069,=C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 14:30:36.000.418,C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\Unit1.dfm=C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\ufrmCalculadoraBasica.dfm</Transaction>
+    <Transaction>2020/10/29 14:30:36.000.418,C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\Unit1.pas=C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\ufrmCalculadoraBasica.pas</Transaction>
+    <Transaction>2020/10/30 14:23:58.000.715,=C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\uFrmPrecedencia.pas</Transaction>
+    <Transaction>2020/11/05 14:28:20.000.570,=C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\Unit1.pas</Transaction>
+    <Transaction>2020/11/05 14:29:09.000.153,C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\uFrmLacosRepeticao.pas=C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\Unit1.pas</Transaction>
+    <Transaction>2020/11/05 14:29:09.000.153,C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\uFrmLacosRepeticao.dfm=C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\Unit1.dfm</Transaction>
+    <Transaction>2020/11/12 14:44:47.000.435,=C:\Users\vandersonmagalhaes\Desktop\Curso Delphi\projetos\projeto_base\ufrmCalculadoraBasicaFuncao.pas</Transaction>
+    <Transaction>2020/11/19 13:53:29.000.980,=C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\Unit1.pas</Transaction>
+    <Transaction>2020/11/19 13:53:59.000.766,C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\Unit1.dfm=C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\UfrmPaginas1.dfm</Transaction>
+    <Transaction>2020/11/19 13:53:59.000.766,C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\Unit1.pas=C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\UfrmPaginas1.pas</Transaction>
+    <Transaction>2020/11/19 16:41:34.000.954,=C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\Unit1.pas</Transaction>
+    <Transaction>2020/11/19 16:42:43.000.718,C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\ufrmIMC1.pas=C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\Unit1.pas</Transaction>
+    <Transaction>2020/11/19 16:42:43.000.718,C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\ufrmIMC1.dfm=C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\Unit1.dfm</Transaction>
+    <Transaction>2020/11/20 16:08:12.000.283,=C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\Unit1.pas</Transaction>
+    <Transaction>2020/11/20 16:09:25.000.665,C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\Unit1.pas=C:\Users\aluno00\Desktop\Curso Delphi\projetos\projeto_base\uRotinas.pas</Transaction>
+  </Transactions>
+</BorlandProject>

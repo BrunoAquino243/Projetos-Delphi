@@ -1,0 +1,19 @@
+program projeto_base;
+
+uses
+  Vcl.Forms,
+  frmMenu in 'frmMenu.pas' {frmMenuPrincipal},
+  ufrmCalculadoraBasica in 'ufrmCalculadoraBasica.pas' {frmCalculadoraBasica},
+  uFrmPrecedencia in 'uFrmPrecedencia.pas' {frmPrecedencia},
+  uFrmLacosRepeticao in 'uFrmLacosRepeticao.pas' {frmLacosRepeticao},
+  ufrmCalculadoraBasicaFuncao in 'ufrmCalculadoraBasicaFuncao.pas' {frmCalculadoraBasicaFuncao};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmMenuPrincipal, frmMenuPrincipal);
+  Application.CreateForm(TfrmCalculadoraBasicaFuncao, frmCalculadoraBasicaFuncao);
+  Application.Run;
+end.

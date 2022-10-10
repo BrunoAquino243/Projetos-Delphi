@@ -1,0 +1,33 @@
+unit uDtmCRM1;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, ZAbstractRODataset,
+  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection;
+
+type
+  TdtmCRM = class(TDataModule)
+    conexao: TZConnection;
+    dtsCorretor: TDataSource;
+    qryCorretor: TZQuery;
+    qryCorretorCODCORRETOR: TFloatField;
+    qryCorretorNOME: TWideStringField;
+    qryCorretorCELULAR: TFloatField;
+    qryCorretorEMAIL: TWideStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dtmCRM: TdtmCRM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,19 @@
+unit uRotinas;
+
+interface
+
+uses
+  windows, SysUtils, Classes, Forms;
+
+procedure MsgErro(Text: string);
+
+implementation
+
+procedure MsgErro(Text: string);
+begin
+
+  Application.MessageBox(Pchar(Text), 'Erro', mb_OK + mb_iconHand);
+
+end;
+
+end.

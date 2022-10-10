@@ -1,0 +1,20 @@
+program pProjetoCRM;
+
+uses
+  Vcl.Forms,
+  UMenuPrincipal in 'UMenuPrincipal.pas' {frmMenuPrincipal},
+  ufrmMntCorretores in 'ufrmMntCorretores.pas' {frmMntCorretores},
+  Vcl.Themes,
+  Vcl.Styles,
+  uDtmCRM1 in 'uDtmCRM1.pas' {dtmCRM1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Cyan Night');
+  Application.CreateForm(TfrmMenuPrincipal, frmMenuPrincipal);
+  Application.CreateForm(TdtmCRM1, dtmCRM1);
+  Application.Run;
+end.

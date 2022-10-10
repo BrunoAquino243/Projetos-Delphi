@@ -1,0 +1,16 @@
+program pProjetoCRM;
+
+uses
+  Vcl.Forms,
+  UMenuPrincipal in 'UMenuPrincipal.pas' {frmMenuPrincipal},
+  ufrmMntCorretores in 'ufrmMntCorretores.pas' {frmMntCorretores};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmMenuPrincipal, frmMenuPrincipal);
+  Application.CreateForm(TfrmMntCorretores, frmMntCorretores);
+  Application.Run;
+end.

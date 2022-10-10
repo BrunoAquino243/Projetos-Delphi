@@ -1,0 +1,18 @@
+program pProjetoCRM;
+
+uses
+  Vcl.Forms,
+  UMenuPrincipal in 'UMenuPrincipal.pas' {frmMenuPrincipal},
+  ufrmMntCorretores in 'ufrmMntCorretores.pas' {frmMntCorretores},
+  Vcl.Themes,
+  Vcl.Styles;
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Cyan Night');
+  Application.CreateForm(TfrmMenuPrincipal, frmMenuPrincipal);
+  Application.Run;
+end.

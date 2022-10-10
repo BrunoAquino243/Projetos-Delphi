@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/11/27 15:20:08.000.643,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/11/27 15:55:45.000.672,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/11/27 15:56:24.000.564,C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\UMenuPrincipal.dfm</Transaction>
+    <Transaction>2020/11/27 15:56:24.000.564,C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\UMenuPrincipal.pas</Transaction>
+    <Transaction>2020/11/27 15:56:41.000.718,C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\pProjetoCRM.dproj</Transaction>
+    <Transaction>2020/11/27 16:03:23.000.745,=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\Unit1.pas</Transaction>
+    <Transaction>2020/11/27 16:07:50.000.355,C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\Unit1.dfm=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\ufrmMntCorretores.dfm</Transaction>
+    <Transaction>2020/11/27 16:07:50.000.355,C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\Unit1.pas=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\ufrmMntCorretores.pas</Transaction>
+    <Transaction>2020/11/27 16:40:40.000.548,=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\Unit1.pas</Transaction>
+    <Transaction>2020/11/27 16:41:58.000.663,C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\Unit1.pas=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\uDtmCRM1.pas</Transaction>
+    <Transaction>2020/11/27 16:41:58.000.663,C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\Unit1.dfm=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\uDtmCRM1.dfm</Transaction>
+    <Transaction>2020/12/04 13:58:57.000.661,=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\uRotinas.pas</Transaction>
+    <Transaction>2020/12/10 16:54:52.000.727,=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\Unit1.pas</Transaction>
+    <Transaction>2020/12/10 16:56:23.000.305,C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\Unit1.dfm=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\UfrmCadastroClientes.dfm</Transaction>
+    <Transaction>2020/12/10 16:56:23.000.305,C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\Unit1.pas=C:\Users\Administrador\Desktop\Curso Delphi\projetos\ProjetoCRM\UfrmCadastroClientes.pas</Transaction>
+  </Transactions>
+</BorlandProject>

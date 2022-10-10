@@ -1,0 +1,142 @@
+object CalculadoraIMC: TCalculadoraIMC
+  Left = 0
+  Top = 0
+  Caption = 'Calculadora IMC'
+  ClientHeight = 172
+  ClientWidth = 423
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lb_altura: TLabel
+    Left = 16
+    Top = 13
+    Width = 41
+    Height = 16
+    Caption = 'Altura'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lb_peso: TLabel
+    Left = 16
+    Top = 59
+    Width = 31
+    Height = 16
+    Caption = 'Peso'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lb_imc: TLabel
+    Left = 184
+    Top = 13
+    Width = 24
+    Height = 16
+    Caption = 'IMC'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lb_resultado: TLabel
+    Left = 184
+    Top = 59
+    Width = 65
+    Height = 16
+    Caption = 'Resultado'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object btn_calcular: TButton
+    Left = 151
+    Top = 116
+    Width = 121
+    Height = 40
+    Caption = 'Calcular'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    OnClick = btn_calcularClick
+  end
+  object edit_altura: TEdit
+    Left = 16
+    Top = 32
+    Width = 121
+    Height = 21
+    TabOrder = 1
+  end
+  object edit_peso: TEdit
+    Left = 16
+    Top = 77
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object edit_imc: TEdit
+    Left = 184
+    Top = 32
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object edit_resultado: TEdit
+    Left = 184
+    Top = 77
+    Width = 225
+    Height = 21
+    TabOrder = 4
+  end
+  object btn_sair: TButton
+    Left = 288
+    Top = 116
+    Width = 121
+    Height = 40
+    Caption = 'Sair'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 5
+    OnClick = btn_sairClick
+  end
+  object btn_limpar: TButton
+    Left = 16
+    Top = 116
+    Width = 121
+    Height = 40
+    Caption = 'Limpar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+    OnClick = btn_limparClick
+  end
+end

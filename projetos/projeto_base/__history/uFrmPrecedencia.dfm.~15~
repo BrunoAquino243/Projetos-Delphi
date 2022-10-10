@@ -1,0 +1,104 @@
+object frmPrecedencia: TfrmPrecedencia
+  Left = 0
+  Top = 0
+  Caption = 'Preced'#234'ncia'
+  ClientHeight = 320
+  ClientWidth = 530
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object btnCalculo1: TButton
+    Left = 8
+    Top = 8
+    Width = 105
+    Height = 33
+    Caption = 'C'#225'lculo 1'
+    TabOrder = 0
+    OnClick = btnCalculo1Click
+  end
+  object edtResultado: TEdit
+    Left = 8
+    Top = 47
+    Width = 105
+    Height = 21
+    TabOrder = 1
+  end
+  object btnCalcularValorIngresso: TButton
+    Left = 264
+    Top = 159
+    Width = 75
+    Height = 58
+    Caption = 'Calcular Valor Ingresso com constantes'
+    TabOrder = 2
+    WordWrap = True
+    OnClick = btnCalcularValorIngressoClick
+  end
+  object grpFaixaEtaria: TGroupBox
+    Left = 168
+    Top = 8
+    Width = 129
+    Height = 145
+    Caption = 'Faixa Et'#225'ria:'
+    TabOrder = 3
+    object chkAbaixo10: TCheckBox
+      Left = 16
+      Top = 24
+      Width = 97
+      Height = 17
+      Caption = 'Abaixo de 10'
+      TabOrder = 0
+    end
+    object chk10a30: TCheckBox
+      Left = 16
+      Top = 47
+      Width = 97
+      Height = 17
+      Caption = 'De 10 a 30'
+      TabOrder = 1
+    end
+    object chk31a60: TCheckBox
+      Left = 16
+      Top = 70
+      Width = 97
+      Height = 17
+      Caption = 'De 31 a 60'
+      TabOrder = 2
+    end
+    object chk61a100: TCheckBox
+      Left = 16
+      Top = 93
+      Width = 97
+      Height = 17
+      Caption = 'De 61 a 100'
+      TabOrder = 3
+    end
+    object chkAcima100: TCheckBox
+      Left = 16
+      Top = 116
+      Width = 97
+      Height = 17
+      Caption = 'Acima de 100'
+      TabOrder = 4
+    end
+  end
+  object rdgEstacao: TRadioGroup
+    Left = 303
+    Top = 8
+    Width = 122
+    Height = 145
+    Caption = 'Esta'#231#227'o do Ano'
+    Items.Strings = (
+      'Ver'#227'o'
+      'Outono'
+      'Inverno'
+      'Primavera')
+    TabOrder = 4
+  end
+end

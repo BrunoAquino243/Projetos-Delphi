@@ -1,0 +1,109 @@
+unit UfrmPaginas1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
+
+type
+  TFrmPaginas1 = class(TForm)
+    PageControl: TPageControl;
+    TabTimer: TTabSheet;
+    TabTODO: TTabSheet;
+    TabAba3: TTabSheet;
+    Timer1: TTimer;
+    pmlRelogio: TPanel;
+    Label1: TLabel;
+    chkPermiteTrocaAba: TCheckBox;
+    Button1: TButton;
+    btn_IMC: TButton;
+    edt_nome: TEdit;
+    Label2: TLabel;
+    tabMensagens: TTabSheet;
+    btn_confirma: TButton;
+    procedure Timer1Timer(Sender: TObject);
+    procedure TabTimerShow(Sender: TObject);
+    procedure PageControlChanging(Sender: TObject; var AllowChange: Boolean);
+    procedure FormShow(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure btn_IMCClick(Sender: TObject);
+    procedure btn_confirmaClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPaginas1: TFrmPaginas1;
+
+implementation
+
+{$R *.dfm}
+
+uses ufrmIMC1, uRotinas;
+
+procedure TFrmPaginas1.btn_confirmaClick(Sender: TObject);
+begin
+  if (confirma('Deseja excluir?')) then
+    ShowMessage('Registro excluído com sucesso!')
+  else
+    ShowMessage('Resgistro Não foi excluído');
+
+end;
+
+procedure TFrmPaginas1.btn_IMCClick(Sender: TObject);
+begin
+  if (Length(edt_nome.Text) < 4) then
+  begin
+    ShowMessage('Digite seu Nome!');
+    edt_nome.SetFocus;
+    CalculadoraIMC.Close;
+  end
+  else
+  begin
+    Application.CreateForm(TCalculadoraIMC, CalculadoraIMC);
+    CalculadoraIMC.edit_nomePessoa.Text := FrmPaginas1.edt_nome.Text;
+    CalculadoraIMC.ShowModal;
+    CalculadoraIMC.Free;
+  end;
+end;
+
+procedure TFrmPaginas1.Button1Click(Sender: TObject);
+begin
+  // TODO: Precisamos implementar nesse botão a função de Equação Aritmética
+  // TODO: Tive um aidéia incrivel de criar um botão trabalhar.
+end;
+
+procedure TFrmPaginas1.FormShow(Sender: TObject);
+begin
+  PageControl.ActivePageIndex := 0;
+end;
+
+procedure TFrmPaginas1.PageControlChanging(Sender: TObject;
+  var AllowChange: Boolean);
+begin
+  if (chkPermiteTrocaAba.Checked) then
+    AllowChange := True
+  else
+  begin
+    AllowChange := False;
+    ShowMessage
+      ('Você não está autorizado pelos orgãos de inteligência a trocar de Aba! ');
+  end;
+end;
+
+procedure TFrmPaginas1.TabTimerShow(Sender: TObject);
+begin
+  Label1.Caption := DateTimeToStr(Now);
+end;
+
+procedure TFrmPaginas1.Timer1Timer(Sender: TObject);
+begin
+  Label1.Caption := DateTimeToStr(Now);
+end;
+
+end.

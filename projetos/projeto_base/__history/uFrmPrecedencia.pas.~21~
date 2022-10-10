@@ -1,0 +1,148 @@
+unit uFrmPrecedencia;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmPrecedencia = class(TForm)
+    btnCalculo1: TButton;
+    edtResultado: TEdit;
+    btnCalcularValorIngresso: TButton;
+    grpFaixaEtaria: TGroupBox;
+    chkAbaixo10: TCheckBox;
+    chk10a30: TCheckBox;
+    chk31a60: TCheckBox;
+    chk61a100: TCheckBox;
+    chkAcima100: TCheckBox;
+    rdgEstacao: TRadioGroup;
+    procedure btnCalculo1Click(Sender: TObject);
+    procedure btnCalcularValorIngressoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrecedencia: TfrmPrecedencia;
+
+Const
+  // VALORES FIXOS DOS INGRESSOS GRAZZIOTIN WORLD
+  // ABAIXO DE 10
+  C_VLR_ABAIXO_10     : INTEGER = 0;
+  C_DESCONTO_ABAIXO10 : INTEGER = 0;
+  C_AGIO_ABAIXO10     : INTEGER = 0;
+  // 10 A 30
+  C_VLR_10A30         : INTEGER = 30;
+  C_DESCONTO_10A30    : INTEGER = 10;
+  C_AGIO_10A30        : INTEGER = 10;
+  // 31 A 60
+  C_VLR_31A60         : INTEGER = 60;
+  C_DESCONTO_31A60    : INTEGER = 20;
+  C_AGIO_31A60        : INTEGER = 20;
+  // 61 A 100
+  C_VLR_61A100        : INTEGER = 100;
+  C_DESCONTO_61A100   : INTEGER = 30;
+  C_AGIO_61A100       : INTEGER = 30;
+  // ACIMA DE 100
+  C_VLR_ACIMA100      : INTEGER = 0;
+  C_DESCONTO_ACIMA100 : INTEGER = 0;
+  C_AGIO_ACIMA100     : INTEGER = 0;
+
+  // Estações
+  C_VERAO     : INTEGER = 0;
+  C_OUTONO    : INTEGER = 1;
+  C_INVERNO   : INTEGER = 2;
+  C_PRIMAVERA : INTEGER = 3;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrecedencia.btnCalculo1Click(Sender: TObject);
+var
+   fResultado: double;
+begin
+
+   fResultado := (1 + 1) + 5 * 10;
+   ShowMessage(FloatToStr(fResultado));
+
+   fResultado := ((1 + 1) + 5) * 10 ;
+   ShowMessage(FloatToStr(fResultado));
+
+   fResultado := ((1 + 1) + 5) * 10 / 7 ;
+   ShowMessage(FloatToStr(fResultado));
+
+   fResultado := ((1 + 1) + 5) * (10 / 7) ;
+   ShowMessage(FloatToStr(fResultado));
+
+   edtResultado.Text := FloatToStr(fResultado);
+
+end;
+
+procedure TfrmPrecedencia.btnCalcularValorIngressoClick(Sender: TObject);
+var
+   dValorIngresso, dValorAgio, dValorDesconto: Double;
+   sMensagem: string;
+begin
+
+    if (chkAbaixo10.Checked) then
+    begin
+        dValorIngresso := C_VLR_ABAIXO_10;
+        dValorAgio     := C_AGIO_ABAIXO10;
+        dValorDesconto := C_DESCONTO_ABAIXO10;
+    end
+    else
+    if (chk10a30.Checked) then
+    begin
+        dValorIngresso := C_VLR_10A30;
+        dValorAgio     := C_AGIO_10A30;
+        dValorDesconto := C_DESCONTO_10A30;
+    end
+    else
+    if (chk31a60.Checked)then
+    begin
+        dValorIngresso := C_VLR_31A60;
+        dValorAgio     := C_AGIO_31A60;
+        dValorDesconto := C_DESCONTO_31A60;
+    end
+    else
+    if (chk61a100.Checked) then
+    begin
+        dValorIngresso := C_VLR_61A100;
+        dValorAgio     := C_AGIO_61A100;
+        dValorDesconto := C_DESCONTO_61A100;
+    end
+    else
+    if (chkAcima100.Checked) then
+    begin
+        dValorIngresso := C_VLR_ACIMA100;
+        dValorAgio     := C_AGIO_ACIMA100;
+        dValorDesconto := C_DESCONTO_ACIMA100;
+    end;
+
+    case rdgEstacao.ItemIndex of
+        // Verão
+        0: begin
+            dValorIngresso := (dValorIngresso * C_DESCONTO_ABAIXO10);
+        end;
+        // Iverno
+        2: begin
+
+        end;
+        // Primavera
+        else
+        begin
+
+        end;
+
+    end;
+
+    ShowMessage('O valor do ingresso é: R$ ' + );
+
+end;
+
+end.

@@ -1,0 +1,162 @@
+object frmCalculadoraBasica: TfrmCalculadoraBasica
+  Left = 0
+  Top = 0
+  Caption = 'Calculadora B'#225'sica'
+  ClientHeight = 117
+  ClientWidth = 392
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 27
+    Top = 19
+    Width = 51
+    Height = 16
+    Caption = 'Valor 1:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 27
+    Top = 51
+    Width = 51
+    Height = 16
+    Caption = 'Valor 2:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 77
+    Width = 70
+    Height = 24
+    Caption = 'Resultado:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object edtValor1: TEdit
+    Left = 96
+    Top = 19
+    Width = 121
+    Height = 21
+    TabOrder = 0
+    OnKeyPress = edtValor1KeyPress
+  end
+  object edtValor2: TEdit
+    Left = 96
+    Top = 50
+    Width = 121
+    Height = 21
+    TabOrder = 1
+    OnKeyPress = edtValor2KeyPress
+  end
+  object edtResultado: TEdit
+    Left = 96
+    Top = 77
+    Width = 121
+    Height = 24
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object btnSomar: TButton
+    Left = 240
+    Top = 19
+    Width = 40
+    Height = 42
+    Caption = '+'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btnSomarClick
+  end
+  object btnSubtrair: TButton
+    Left = 240
+    Top = 64
+    Width = 40
+    Height = 42
+    Caption = '-'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btnSubtrairClick
+  end
+  object btnMultiplicar: TButton
+    Left = 286
+    Top = 19
+    Width = 40
+    Height = 42
+    Caption = '*'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = btnMultiplicarClick
+  end
+  object btnDividir: TButton
+    Left = 286
+    Top = 64
+    Width = 40
+    Height = 42
+    Caption = '/'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+    OnClick = btnDividirClick
+  end
+  object btnPercentual: TButton
+    Left = 332
+    Top = 19
+    Width = 40
+    Height = 87
+    Caption = '%'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = btnPercentualClick
+  end
+end
