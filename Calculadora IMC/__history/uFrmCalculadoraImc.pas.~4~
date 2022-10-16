@@ -1,0 +1,55 @@
+unit uFrmCalculadoraImc;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.jpeg, Vcl.Imaging.pngimage;
+
+type
+  TfrmCalculaImc = class(TForm)
+    Image1: TImage;
+    Label1: TLabel;
+    lb_altura: TLabel;
+    lb_peso: TLabel;
+    edtPeso: TEdit;
+    edtAltura: TEdit;
+    edtResultado: TEdit;
+    lb_imc: TLabel;
+    edtImc: TEdit;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    procedure Image4Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCalculaImc: TfrmCalculaImc;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCalculaImc.Image3Click(Sender: TObject);
+begin
+     edtAltura.Text := '';
+     edtPeso.Text := '';
+     edtImc.Text := '';
+     edtResultado.Text := '';
+end;
+
+procedure TfrmCalculaImc.Image4Click(Sender: TObject);
+begin
+     Close;
+end;
+
+end.

@@ -1,0 +1,131 @@
+unit uFrmCalculadoraImc;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.jpeg, Vcl.Imaging.pngimage;
+
+type
+  TfrmCalculaImc = class(TForm)
+    Image1: TImage;
+    Label1: TLabel;
+    lb_altura: TLabel;
+    lb_peso: TLabel;
+    edtPeso: TEdit;
+    edtAltura: TEdit;
+    edtResultado: TEdit;
+    lb_imc: TLabel;
+    edtImc: TEdit;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    edtNome: TEdit;
+    procedure Image4Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCalculaImc: TfrmCalculaImc;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCalculaImc.FormCreate(Sender: TObject);
+var
+   Resultado: Integer;
+begin
+     Resultado := MessageDlg('Deseja realizar o processo automaticamente ?', mtConfirmation, [mbYes, mbNo], 0);
+
+     case Resultado of
+          mrYes: begin
+                      edtNome.Text := 'Nome1';
+                      edtAltura.Text := '1,70';
+                      edtPeso.Text := '62,22';
+                      Image2.OnClick(self);
+                 end;
+          mrNo:  begin
+                      //
+                 end;
+     end;
+end;
+
+procedure TfrmCalculaImc.Image2Click(Sender: TObject);
+var
+   peso, altura, imc : Real;
+begin
+     altura := StrToFloat(edtAltura.Text);
+     peso := StrToFloat(edtPeso.Text);
+     imc := peso / (altura * altura);
+
+     if imc < 17 then
+     begin
+          edtResultado.Text := ('Muito Abaixo do Peso');
+          edtImc.Text := FloatToStr(imc);
+     end;
+
+     if (imc >= 17) and (imc <= 18.49) then
+     begin
+          edtResultado.Text := ('Abaixo do Peso');
+          edtImc.Text := FloatToStr(imc);
+     end;
+
+     if (imc >= 18.5) and (imc <= 24.99) then
+     begin
+          edtResultado.Text := ('Peso Normal');
+          edtImc.Text := FloatToStr(imc);
+     end;
+
+     if (imc >= 25) and (imc <= 29.99) then
+     begin
+          edtResultado.Text := ('Acima do Peso');
+          edtImc.Text := FloatToStr(imc);
+     end;
+
+     if (imc >= 30) and (imc <= 34.99) then
+     begin
+          edtResultado.Text := ('Obesidade I');
+          edtImc.Text := FloatToStr(imc);
+     end;
+
+     if (imc >= 35) and (imc <= 39.99)then
+     begin
+          edtResultado.Text := ('Obesidade II [Severa]');
+          edtImc.Text := FloatToStr(imc);
+     end;
+
+     if (imc >= 40) then
+     begin
+          edtResultado.Text := ('Obesidade III [Mórbida]');
+          edtImc.Text := FloatToStr(imc);
+     end;
+end;
+
+procedure TfrmCalculaImc.Image3Click(Sender: TObject);
+begin
+     edtNome.Clear;
+     edtAltura.Clear;
+     edtPeso.Clear;
+     edtImc.Clear;
+     edtResultado.Clear;
+     edtNome.SetFocus;
+end;
+
+procedure TfrmCalculaImc.Image4Click(Sender: TObject);
+begin
+     Close;
+end;
+
+end.
