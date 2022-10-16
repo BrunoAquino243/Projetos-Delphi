@@ -1,0 +1,161 @@
+object dtmProjetoFinal: TdtmProjetoFinal
+  OldCreateOrder = False
+  Height = 442
+  Width = 643
+  object conexao: TZConnection
+    ControlsCodePage = cCP_UTF16
+    AutoEncodeStrings = True
+    Catalog = ''
+    Properties.Strings = (
+      'controls_cp=CP_UTF16')
+    Connected = True
+    HostName = 'localhost'
+    Port = 1521
+    Database = 'xe'
+    User = 'system'
+    Password = 'system'
+    Protocol = 'oracle'
+    LibraryLocation = 'C:\oraclexe\app\oracle\product\11.2.0\server\bin\oci.dll'
+    Left = 24
+    Top = 8
+  end
+  object qryCds: TZQuery
+    Connection = conexao
+    Active = True
+    SQL.Strings = (
+      'SELECT * '
+      'FROM CDS '
+      'ORDER BY DESCRICAO'
+      '')
+    Params = <>
+    Sequence = seqcds
+    SequenceField = 'CODIGOCD'
+    Left = 24
+    Top = 80
+    object qryCdsCODIGOCD: TLargeintField
+      FieldName = 'CODIGOCD'
+      Required = True
+    end
+    object qryCdsDESCRICAO: TWideStringField
+      FieldName = 'DESCRICAO'
+      Size = 50
+    end
+    object qryCdsCODIGOBARRA: TLargeintField
+      FieldName = 'CODIGOBARRA'
+    end
+    object qryCdsVALOR: TFloatField
+      FieldName = 'VALOR'
+    end
+    object qryCdsOBSERVACAO: TWideStringField
+      FieldName = 'OBSERVACAO'
+      Size = 100
+    end
+    object qryCdsCODIGOGENERO: TLargeintField
+      FieldName = 'CODIGOGENERO'
+      Required = True
+    end
+  end
+  object dtsCds: TDataSource
+    DataSet = qryCds
+    Left = 120
+    Top = 80
+  end
+  object seqcds: TZSequence
+    Connection = conexao
+    SequenceName = 'seqCds'
+    Left = 208
+    Top = 80
+  end
+  object qryGenero: TZQuery
+    Connection = conexao
+    Active = True
+    SQL.Strings = (
+      'SELECT * '
+      'FROM GENERO'
+      ''
+      '')
+    Params = <>
+    Properties.Strings = (
+      'SELECT * '
+      'FROM GENERO'
+      '')
+    Sequence = seqGenero
+    SequenceField = 'CODIGOGENERO'
+    Left = 24
+    Top = 168
+    object qryGeneroCODIGOGENERO: TLargeintField
+      FieldName = 'CODIGOGENERO'
+      Required = True
+    end
+    object qryGeneroDESCRICAO: TWideStringField
+      FieldName = 'DESCRICAO'
+      Size = 30
+    end
+  end
+  object dtsGenero: TDataSource
+    DataSet = qryGenero
+    Left = 120
+    Top = 168
+  end
+  object seqGenero: TZSequence
+    Connection = conexao
+    SequenceName = 'seqGenero'
+    Left = 208
+    Top = 168
+  end
+  object qryPessoa: TZQuery
+    Connection = conexao
+    Active = True
+    SQL.Strings = (
+      'SELECT * '
+      'FROM PESSOA'
+      ''
+      '')
+    Params = <>
+    Sequence = seqPessoa
+    SequenceField = 'CODIGOPESSOA'
+    Left = 24
+    Top = 240
+    object qryPessoaCODIGOPESSOA: TLargeintField
+      DisplayLabel = 'C'#243'digo Pessoa'
+      FieldName = 'CODIGOPESSOA'
+      Required = True
+    end
+    object qryPessoaNOME: TWideStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'NOME'
+      Size = 30
+    end
+    object qryPessoaCPF: TWideStringField
+      FieldName = 'CPF'
+      Required = True
+      EditMask = '999\.999\.999\-99;1;_'
+    end
+    object qryPessoaDATANASC: TDateTimeField
+      DisplayLabel = 'Data Nasc.'
+      FieldName = 'DATANASC'
+      EditMask = '!99/99/9999;1;_'
+    end
+    object qryPessoaUSUARIO: TWideStringField
+      DisplayLabel = 'Usu'#225'rio'
+      FieldName = 'USUARIO'
+      Required = True
+    end
+    object qryPessoaSENHA: TWideStringField
+      DisplayLabel = 'Senha'
+      FieldName = 'SENHA'
+      Required = True
+    end
+  end
+  object dtsPessoa: TDataSource
+    DataSet = qryPessoa
+    Left = 120
+    Top = 240
+  end
+  object seqPessoa: TZSequence
+    Connection = conexao
+    SequenceName = 'seqPessoa'
+    Left = 208
+    Top = 240
+  end
+end

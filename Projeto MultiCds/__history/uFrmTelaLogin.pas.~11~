@@ -1,0 +1,89 @@
+unit uFrmTelaLogin;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmTelaLogin = class(TForm)
+    lbMultiCds: TLabel;
+    lbSejaBemVindo: TLabel;
+    lbUsuario: TLabel;
+    edtUsuario: TEdit;
+    lbSenha: TLabel;
+    edtSenha: TEdit;
+    btnEntrar: TButton;
+    procedure btnEntrarClick(Sender: TObject);
+  private
+     tentativas: SmallInt;
+
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTelaLogin: TfrmTelaLogin;
+
+implementation
+
+{$R *.dfm}
+
+uses uFrmMenuPrincipal, udtmProjetoFinal, uRotinas;
+
+procedure TfrmTelaLogin.btnEntrarClick(Sender: TObject);
+begin
+
+  dtmProjetoFinal.qryPessoa.SQL.Clear;
+  dtmProjetoFinal.qryPessoa.SQL.Add('select * from Pessoa where usuario = ''' + edtUsuario.Text + ''' and senha = ''' + edtSenha.Text + '''');
+  dtmProjetoFinal.qryPessoa.Open;
+
+  if edtUsuario.Text = '' then   //verifica se o campo usuario esta vazio
+  begin
+    advertencia('Digite seu usuário!');
+    edtUsuario.SetFocus;
+    abort;
+  end;
+
+  if edtSenha.Text = '' then     //verifica se o campo senha esta vazio
+  begin
+    advertencia('Digite sua senha!');
+    edtSenha.SetFocus;
+    abort;
+  end;
+
+  if loginValido(edtUsuario.Text, edtSenha.Text) then  //verifica se o login é valido
+     ModalResult := mrOk
+  else // caso o login não seja valido
+  begin
+    Inc(tentativas); //incrementa em 1 o valor da variavel tentativas
+    if tentativas < 3 then
+  begin
+    MessageDlg(Format('Tentativa %d de 3', [tentativas]), mtError, [mbOK], 0);
+    if edtSenha.CanFocus then
+    edtSenha.SetFocus;
+  end
+  else
+  begin
+    MessageDlg(Format('%dª tentativa de acesso ao sistema.',
+    [tentativas]) + #13 + 'A aplicação vai ser Bloqueada!', mtError, [mbOK], 0);
+    ModalResult := mrCancel;
+  end;
+  end;
+
+
+  if not dtmProjetoFinal.qryPessoa.Eof then
+  begin
+
+    Application.CreateForm(TFrmMenuPrincipal, FrmMenuPrincipal);
+    FrmMenuPrincipal.ShowModal;
+    FrmMenuPrincipal.Free;
+    frmMenuPrincipal.Close;
+
+  end;
+
+end;
+
+end.

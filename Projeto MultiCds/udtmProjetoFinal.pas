@@ -1,0 +1,50 @@
+unit udtmProjetoFinal;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, ZSequence, ZAbstractRODataset,
+  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection;
+
+type
+  TdtmProjetoFinal = class(TDataModule)
+    conexao: TZConnection;
+    qryCds: TZQuery;
+    dtsCds: TDataSource;
+    seqcds: TZSequence;
+    qryGenero: TZQuery;
+    dtsGenero: TDataSource;
+    seqGenero: TZSequence;
+    qryPessoa: TZQuery;
+    dtsPessoa: TDataSource;
+    seqPessoa: TZSequence;
+    qryCdsCODIGOCD: TLargeintField;
+    qryCdsDESCRICAO: TWideStringField;
+    qryCdsCODIGOBARRA: TLargeintField;
+    qryCdsVALOR: TFloatField;
+    qryCdsOBSERVACAO: TWideStringField;
+    qryCdsCODIGOGENERO: TLargeintField;
+    qryGeneroCODIGOGENERO: TLargeintField;
+    qryGeneroDESCRICAO: TWideStringField;
+    qryPessoaCODIGOPESSOA: TLargeintField;
+    qryPessoaNOME: TWideStringField;
+    qryPessoaCPF: TWideStringField;
+    qryPessoaDATANASC: TDateTimeField;
+    qryPessoaUSUARIO: TWideStringField;
+    qryPessoaSENHA: TWideStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dtmProjetoFinal: TdtmProjetoFinal;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

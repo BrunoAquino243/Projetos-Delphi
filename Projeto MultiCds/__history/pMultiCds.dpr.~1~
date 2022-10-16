@@ -1,0 +1,14 @@
+program pMultiCds;
+
+uses
+  Vcl.Forms,
+  uFrmTelaLogin in 'uFrmTelaLogin.pas' {frmTelaLogin};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmTelaLogin, frmTelaLogin);
+  Application.Run;
+end.

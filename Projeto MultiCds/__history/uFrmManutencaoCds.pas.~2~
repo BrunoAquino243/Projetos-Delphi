@@ -1,0 +1,40 @@
+unit uFrmManutencaoCds;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls,
+  Vcl.WinXCtrls;
+
+type
+  TfrmManutencaodeCds = class(TForm)
+    Label1: TLabel;
+    SearchBox1: TSearchBox;
+    DBListBox1: TDBListBox;
+    btnMenu: TButton;
+    DBNavigator1: TDBNavigator;
+    procedure btnMenuClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmManutencaodeCds: TfrmManutencaodeCds;
+
+implementation
+
+{$R *.dfm}
+
+uses uFrmMenuPrincipal;
+
+procedure TfrmManutencaodeCds.btnMenuClick(Sender: TObject);
+begin
+  Application.CreateForm(TfrmMenuPrincipal, frmMenuPrincipal);
+  frmMenuPrincipal.ShowModal;
+  frmMenuPrincipal.Free;
+end;
+
+end.

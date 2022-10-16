@@ -1,0 +1,62 @@
+unit uManutencaoGeneros;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls,
+  Vcl.WinXCtrls;
+
+type
+  TfrmManutencaoGenero = class(TForm)
+    Label1: TLabel;
+    SearchBox1: TSearchBox;
+    DBListBox1: TDBListBox;
+    btnMenu: TButton;
+    DBNavigator1: TDBNavigator;
+    procedure btnMenuClick(Sender: TObject);
+    procedure DBNavigator1BeforeAction(Sender: TObject; Button: TNavigateBtn);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmManutencaoGenero: TfrmManutencaoGenero;
+
+implementation
+
+{$R *.dfm}
+
+uses uFrmCadastrarGeneros, uFrmMenuPrincipal, uRotinas;
+
+procedure TfrmManutencaoGenero.btnMenuClick(Sender: TObject);
+begin
+  Application.CreateForm(TfrmManutencaoCadastrarGenero, frmManutencaoCadastrarGenero);
+  frmManutencaoCadastrarGenero.ShowModal;
+  frmManutencaoCadastrarGenero.Free;
+end;
+
+procedure TfrmManutencaoGenero.DBNavigator1BeforeAction(Sender: TObject;
+  Button: TNavigateBtn);
+begin
+  if (Button = nbInsert) or (Button = nbEdit) then
+      begin
+        frmManutencaoCadastrarGenero.Show;
+      end;
+
+      if (Button = nbRefresh) then
+        begin
+          frmMenuPrincipal.Show;
+          frmManutencaoGenero.Close;
+        end
+
+        else if (Button = nbDelete) then
+          begin
+            if not (confirma('Deseja excluir este registro?')) then
+            abort;
+        end;
+end;
+
+end.

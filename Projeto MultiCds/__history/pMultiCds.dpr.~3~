@@ -1,0 +1,24 @@
+program pMultiCds;
+
+uses
+  Vcl.Forms,
+  uFrmTelaLogin in 'uFrmTelaLogin.pas' {frmTelaLogin},
+  uFrmMenuPrincipal in 'uFrmMenuPrincipal.pas' {frmMenuPrincipal},
+  uFrmManutencaodePessoas in 'uFrmManutencaodePessoas.pas' {frmManutencaoPessoas},
+  uFrmCadastrarPessoas in 'uFrmCadastrarPessoas.pas' {frmManutencaoCadastrarPessoas},
+  uRotinas in 'uRotinas.pas',
+  uManutencaoGeneros in 'uManutencaoGeneros.pas' {frmManutencaoGenero};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmTelaLogin, frmTelaLogin);
+  Application.CreateForm(TfrmMenuPrincipal, frmMenuPrincipal);
+  Application.CreateForm(TfrmManutencaoPessoas, frmManutencaoPessoas);
+  Application.CreateForm(TfrmManutencaoCadastrarPessoas, frmManutencaoCadastrarPessoas);
+  Application.CreateForm(TfrmManutencaoCadastrarPessoas, frmManutencaoCadastrarPessoas);
+  Application.CreateForm(TfrmManutencaoGenero, frmManutencaoGenero);
+  Application.Run;
+end.

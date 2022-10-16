@@ -1,0 +1,31 @@
+unit uFrmManutencaodePessoas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.WinXCtrls, Vcl.DBCtrls;
+
+type
+  TfrmManutencaoPessoas = class(TForm)
+    DBListBox1: TDBListBox;
+    btnMenu: TButton;
+    btnEditar: TButton;
+    btnExcluir: TButton;
+    btnNovo: TButton;
+    SearchBox1: TSearchBox;
+    Label1: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmManutencaoPessoas: TfrmManutencaoPessoas;
+
+implementation
+
+{$R *.dfm}
+
+end.

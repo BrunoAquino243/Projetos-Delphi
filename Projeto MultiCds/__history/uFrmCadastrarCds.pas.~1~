@@ -1,0 +1,24 @@
+unit uFrmCadastrarCds;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfrmCadastrarCds = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastrarCds: TfrmCadastrarCds;
+
+implementation
+
+{$R *.dfm}
+
+end.

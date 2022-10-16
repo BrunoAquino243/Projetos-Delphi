@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/11/27 15:20:08.000.643,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/12/04 16:19:02.000.321,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/12 16:44:58.000.053,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/12 16:48:18.000.632,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmTelaLogin.pas=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/12 16:48:18.000.632,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmTelaLogin.dfm=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/02/12 16:48:33.000.061,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\pMultiCds.dproj=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/02/12 16:50:21.000.545,=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/12 16:53:30.000.685,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmMenuPrincipal.dfm=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.dfm</Transaction>
+    <Transaction>2021/02/12 16:53:30.000.685,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmMenuPrincipal.pas=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/12 16:56:43.000.938,=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmManutencaodePessoas.pas</Transaction>
+    <Transaction>2021/02/12 17:01:21.000.933,=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmCadastrarPessoas.pas</Transaction>
+    <Transaction>2021/02/12 17:08:28.000.405,=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uRotinas.pas</Transaction>
+    <Transaction>2021/02/12 17:09:13.000.446,=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/12 17:11:30.000.540,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uManutencaoGeneros.dfm=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.dfm</Transaction>
+    <Transaction>2021/02/12 17:11:30.000.540,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uManutencaoGeneros.pas=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/12 17:14:37.000.096,=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/12 17:17:45.000.233,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmCadastrarGeneros.pas=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/12 17:17:45.000.233,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmCadastrarGeneros.dfm=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.dfm</Transaction>
+    <Transaction>2021/02/19 14:30:19.000.461,=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/19 14:43:27.000.222,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\udtmProjetoFinal.pas</Transaction>
+    <Transaction>2021/02/19 14:43:27.000.222,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.dfm=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\udtmProjetoFinal.dfm</Transaction>
+    <Transaction>2021/02/19 14:54:22.000.778,=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/19 14:56:42.000.843,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmManutencaoCds.pas=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/19 14:56:42.000.843,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmManutencaoCds.dfm=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.dfm</Transaction>
+    <Transaction>2021/02/19 15:03:09.000.857,=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/19 15:04:09.000.029,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmCadastrarCds.pas=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/19 15:04:09.000.029,C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\uFrmCadastrarCds.dfm=C:\Users\Administrador\Desktop\Projeto Final\Projeto em Delphi\Unit1.dfm</Transaction>
+    <Transaction>2021/03/10 16:15:31.000.143,=C:\Users\aluno00\Desktop\Nova pasta (2)\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/03/10 16:16:38.000.997,C:\Users\aluno00\Desktop\Nova pasta (2)\Projeto Final\Projeto em Delphi\uFrmTelaEntrada.pas=C:\Users\aluno00\Desktop\Nova pasta (2)\Projeto Final\Projeto em Delphi\Unit1.pas</Transaction>
+    <Transaction>2021/03/10 16:16:38.000.997,C:\Users\aluno00\Desktop\Nova pasta (2)\Projeto Final\Projeto em Delphi\uFrmTelaEntrada.dfm=C:\Users\aluno00\Desktop\Nova pasta (2)\Projeto Final\Projeto em Delphi\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

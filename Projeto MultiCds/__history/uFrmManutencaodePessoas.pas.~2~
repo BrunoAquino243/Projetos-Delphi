@@ -1,0 +1,40 @@
+unit uFrmManutencaodePessoas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.WinXCtrls, Vcl.DBCtrls,
+  Vcl.ExtCtrls;
+
+type
+  TfrmManutencaoPessoas = class(TForm)
+    DBListBox1: TDBListBox;
+    btnMenu: TButton;
+    SearchBox1: TSearchBox;
+    Label1: TLabel;
+    DBNavigator1: TDBNavigator;
+    procedure btnMenuClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmManutencaoPessoas: TfrmManutencaoPessoas;
+
+implementation
+
+{$R *.dfm}
+
+uses uFrmCadastrarPessoas;
+
+procedure TfrmManutencaoPessoas.btnMenuClick(Sender: TObject);
+begin
+  Application.CreateForm(TfrmManutencaoCadastrarPessoas, frmManutencaoCadastrarPessoas);
+  frmManutencaoCadastrarPessoas.ShowModal;
+  frmManutencaoCadastrarPessoas.Free;
+end;
+
+end.

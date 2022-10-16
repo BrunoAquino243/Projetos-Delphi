@@ -1,0 +1,34 @@
+program pMultiCds;
+
+uses
+  Vcl.Forms,
+  uFrmTelaLogin in 'uFrmTelaLogin.pas' {frmTelaLogin},
+  uFrmMenuPrincipal in 'uFrmMenuPrincipal.pas' {frmMenuPrincipal},
+  uFrmManutencaodePessoas in 'uFrmManutencaodePessoas.pas' {frmManutencaoPessoas},
+  uFrmCadastrarPessoas in 'uFrmCadastrarPessoas.pas' {frmManutencaoCadastrarPessoas},
+  uRotinas in 'uRotinas.pas',
+  uManutencaoGeneros in 'uManutencaoGeneros.pas' {frmManutencaoGenero},
+  uFrmCadastrarGeneros in 'uFrmCadastrarGeneros.pas' {frmManutencaoCadastrarGenero},
+  udtmProjetoFinal in 'udtmProjetoFinal.pas' {dtmProjetoFinal: TDataModule},
+  uFrmManutencaoCds in 'uFrmManutencaoCds.pas' {frmManutencaodeCds},
+  uFrmCadastrarCds in 'uFrmCadastrarCds.pas' {frmCadastrarCds},
+  uFrmTelaEntrada in 'uFrmTelaEntrada.pas' {frmTelaEntrada};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmTelaLogin, frmTelaLogin);
+  Application.CreateForm(TfrmMenuPrincipal, frmMenuPrincipal);
+  Application.CreateForm(TfrmManutencaoPessoas, frmManutencaoPessoas);
+  Application.CreateForm(TfrmManutencaoCadastrarPessoas, frmManutencaoCadastrarPessoas);
+  Application.CreateForm(TfrmManutencaoCadastrarPessoas, frmManutencaoCadastrarPessoas);
+  Application.CreateForm(TfrmManutencaoGenero, frmManutencaoGenero);
+  Application.CreateForm(TfrmManutencaoCadastrarGenero, frmManutencaoCadastrarGenero);
+  Application.CreateForm(TdtmProjetoFinal, dtmProjetoFinal);
+  Application.CreateForm(TfrmManutencaodeCds, frmManutencaodeCds);
+  Application.CreateForm(TfrmCadastrarCds, frmCadastrarCds);
+  Application.CreateForm(TfrmTelaEntrada, frmTelaEntrada);
+  Application.Run;
+end.
